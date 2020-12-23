@@ -28,6 +28,23 @@ class Usuario{
             return $e->getMessage();
         }
     }
+
+    public function mostrarEstudiantes(){
+        try {
+            $conexionDB = new Conexion();
+            $conn = $conexionDB->abrirConexion();
+            $sql = "SELECT * FROM usuarios WHERE tipo='estudiante'";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+            //$resultado = $stmt->fetchAll();
+
+            $conexionDB->cerrarConexion();
+            return $stmt;
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    }
     public function insertar(int $codigo, String $password, String $tipo, int $id_pa, String $nombres, String $apellidos){
         try{
             

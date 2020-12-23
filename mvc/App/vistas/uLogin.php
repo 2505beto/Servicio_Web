@@ -14,7 +14,7 @@
 <div class="container">
 <div class="row">
     <div class="col">
-        <nav class="navbar navbar-light bg-primary">
+        <nav  class="navbar navbar-light" style="background-color: #43DE7D;">
             <div class="container-fluid">
                 Universidad
             </div>
